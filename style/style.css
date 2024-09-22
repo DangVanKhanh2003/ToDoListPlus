@@ -1,0 +1,158 @@
+html,body{
+    height: 100%;
+    width: 100%;    margin: 0; /* Remove default margin */
+
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navHghlight{
+    color: rgb(37, 141, 201) !important;
+}
+/* common */
+.line-block{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.line-block div{
+    border-top: 1px rgba(194, 194, 194, 0.329) solid;
+
+}
+/* end common */
+/* home */
+.homeMain{
+    width: 100%;
+     height: 100%;
+    padding: 0px;
+
+}
+.nav{
+    width: 52px !important;
+    height: 100%;
+    border-right: 1px rgba(211, 211, 211, 0.404) solid;
+    background-color: #a3a3a385;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+.function{
+    width: 250px !important;
+    height: 100%;
+    background-color: #F9F9F9;
+    border-right: 1px rgb(211, 211, 211,  0.404) solid;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.content{
+    height: 100%;
+    overflow: hidden;
+}
+
+.boxIcon{
+    border-radius: 8%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .boxIcon:hover{
+    background-color: rgba(79, 79, 79, 0.781) ;
+    cursor: pointer;
+}
+.boxIcon:hover{
+    background-color: rgba(179, 179, 179, 0.247);
+    cursor: pointer;
+}
+
+.tagBox{
+    display: flex;
+    height: 35px;
+    padding-left: 15px;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.tagBox:hover{
+    background-color: rgba(161, 161, 161, 0.575);
+}
+.hidden-icon {
+    display: none;
+}
+
+.tagBox:hover .hidden-icon {
+    display: block;
+}
+.function-list{
+    overflow: hidden;
+}
+.function-other{
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+}
+.function a{
+    text-decoration: none !important;
+    color: black;
+}
+/* end home */
+/* sign in and sign up */
+.boxMain{
+    background-color: #F8F8F8;
+    height: 100%;
+    display: flex;
+}
+
+
+.fromSignUp{
+    border-radius: 6%;
+    background-color: #FFFFFF;
+    width: 900px;
+    height: 400;
+    padding: 50px;
+    padding-left: 100px;
+}
+
+.fromSignIn{
+    border-radius: 6%;
+    background-color: #FFFFFF;
+    width: 900px;
+    height: 550px;
+    padding: 50px;
+    padding-left: 50px;
+}
+.lineInput{
+    border-bottom: 1px black solid;
+    width: 80%;
+    margin-top: 10px;
+}
+.lineInput input{
+    font-size: 16px;
+    border: 0px ;
+    outline-width: 0;
+}
+.lineInputIcon{
+    width: 100px ;
+    height: 100px;
+}
+
+.customButon{
+    margin-top: 30px;
+    height: 60px;
+    width: 150px;
+    background-color:#4292DC ;
+    color: white;
+    font-size: 20px;
+    border-radius: 5%;
+    border:  0px;
+
+}
+.customButon:hover{
+    background-color: #4692F5;
+    
+}
+/* end sign in and sign up */

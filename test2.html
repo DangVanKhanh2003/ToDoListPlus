@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expandable Card with Sub-Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-container {
+      position: relative; /* Make this container the relative positioning context */
+    }
+    .sub-card {
+      position: absolute;
+      top: 100%; /* Position just below the main card */
+      left: 0;
+      right: 0;
+      display: none; /* Initially hidden */
+      z-index: 1000; /* Ensure it's on top of other content */
+      transition: all 0.3s ease;
+    }
+    .card.expanded .sub-card {
+      display: block; /* Show the sub-card when the card is expanded */
+    }
+  </style>
+</head>
+<body>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <div class="input-group mb-3">
+      <div class="input-group-text">
+          <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for input">
+      </div>
+      <input type="text" class="form-control" placeholder="Enter text" aria-label="Text input with checkbox">
+  </div>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.card-container').click(function() {
+    // Toggle the sub-card within the clicked card
+    var $subCard = $(this).find('.sub-card');
+    $('.sub-card').not($subCard).slideUp(); // Hide other sub-cards
+    $subCard.slideToggle(); // Toggle the clicked sub-card
+  });
+});
+</script>
+</body>
+</html>

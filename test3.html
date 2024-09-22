@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extend Tag Across div1 and div2</title>
+
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      position: relative;
+    }
+
+    .div1, .div2 {
+      overflow-y: auto;
+    }
+
+    .div1 {
+      position: relative;
+      z-index: 2; /* Ensure div1 is above div2 */
+    }
+
+    .div2 {
+      position: relative;
+      z-index: 1; /* Lower z-index than div1 */
+      background-color: lightgray;
+    }
+
+    .extend-tag {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -100px; /* Adjust this to extend into div2 */
+      z-index: 3; /* Ensure it is on top of div2 */
+      width: 150px;
+      height: 150px;
+      background-color: red;
+    }
+
+    /* To prevent overflow interference */
+    .div1, .div2 {
+      overflow: visible; /* Allow children to extend outside */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="div1">
+      Content of div1
+      <div class="extend-tag">Extend Content</div> <!-- Will extend into div2 -->
+    </div>
+    <div class="div2">
+      Content of div2
+    </div>
+  </div>
+
+  <script>
+    // jQuery to toggle visibility of the extend-tag on div1 click
+    $('.div1').click(function() {
+      $('.extend-tag').toggle();
+    });
+  </script>
+</body>
+</html>
+
